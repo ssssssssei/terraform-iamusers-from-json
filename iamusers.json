@@ -1,0 +1,10 @@
+[
+    {
+        "user_name": "user-1",
+        "policy": "policy-1"
+    },
+    {
+        "user_name": "user-2",
+        "policy": "policy-2"
+    }
+]
