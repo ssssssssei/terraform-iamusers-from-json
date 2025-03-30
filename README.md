@@ -6,7 +6,7 @@
 
 ```mermaid
 flowchart TD
-    A[S3のJSONファイル] -->|更新検知| B[GitHub Actions]
+    A[ローカルJSONファイル] -->|更新検知| B[GitHub Actions]
     B -->|チェックアウト| C[リポジトリ]
     C -->|JSONファイル更新| D[ローカルJSON]
     D -->|Terraform処理| E[AWS IAM]
@@ -15,7 +15,7 @@ flowchart TD
 ```
 
 ## 機能概要
-- JSONファイルからIAMユーザーの一括作成
+- ローカルJSONファイルからIAMユーザーの一括作成
 - GitHubActionsによる自動デプロイ
 - S3バックエンドによる状態管理
 - タグベースのポリシー管理
@@ -77,7 +77,7 @@ terraform apply
 
 ```mermaid
 flowchart LR
-    A[JSON更新] -->|トリガー| B[Actions起動]
+    A[JSONファイル更新] -->|トリガー| B[Actions起動]
     B --> C{変更検知}
     C -->|はい| D[Terraform実行]
     C -->|いいえ| E[終了]
@@ -114,7 +114,7 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A[開始] -->|読み込み| B[JSONファイル]
+    A[開始] -->|読み込み| B[ローカルJSONファイル]
     B -->|パース| C[データ処理]
     C -->|ローカル変数| D[ユーザーマッピング]
     D -->|作成| E[IAMユーザー]
