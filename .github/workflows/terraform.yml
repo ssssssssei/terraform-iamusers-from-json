@@ -33,3 +33,4 @@ jobs:
 
       - name: Terraform Apply  # インフラの適用
         run: terraform apply -auto-approve tfplan
+        
