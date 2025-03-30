@@ -21,15 +21,13 @@ flowchart TD
 - タグベースのポリシー管理
 
 ## ディレクトリ構造
-.
-├── .github/workflows/
-│ └── terraform.yml # GitHub Actions設定
-├── data.tf # データソース定義
-├── main.tf # リソース定義
-├── variables.tf # 変数定義
-├── output.tf # 出力定義
-├── backend.tf # バックエンド設定
-└── iamusers.json # ユーザー設定ファイル
+├── .github/workflows/terraform.yml    # GitHub Actions設定
+├── data.tf                           # データソース定義
+├── main.tf                           # リソース定義
+├── variables.tf                      # 変数定義
+├── output.tf                         # 出力定義
+├── backend.tf                        # バックエンド設定
+└── iamusers.json                     # ユーザー設定ファイル
 
 ## JSONファイルフォーマット
 ```json
